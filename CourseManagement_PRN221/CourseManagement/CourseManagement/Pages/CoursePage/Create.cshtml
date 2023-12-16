@@ -1,0 +1,55 @@
+﻿@page
+@model CourseManagement.Pages.CoursePage.CreateModel
+
+<h4>Course</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" data-val="true">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Course.SubjectId" class="control-label"></label>
+                <select asp-for="Course.SubjectId" class="form-control" asp-items="ViewBag.SubjectId" required></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.SemesterId" class="control-label"></label>
+                <select asp-for="Course.SemesterId" class="form-control" asp-items="ViewBag.SemesterId" required></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.CourseCode" class="control-label"></label>
+                <input asp-for="Course.CourseCode" class="form-control" required data-val="true" data-val-required="Vui lòng nhập mã khóa học."/>
+                <span asp-validation-for="Course.CourseCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.Instructor" class="control-label"></label>
+                <input asp-for="Course.Instructor" class="form-control" required data-val="true" data-val-required="Vui lòng nhập giảng viên." />
+                <span asp-validation-for="Course.Instructor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.CourseDescription" class="control-label"></label>
+                <input asp-for="Course.CourseDescription" class="form-control" required data-val="true" data-val-required="Vui lòng nhập mô tả khóa học" />
+                <span asp-validation-for="Course.CourseDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.DateStart" class="control-label"></label>
+                <input asp-for="Course.DateStart" class="form-control" required data-val="true" data-val-required="Vui lòng nhập thời gian bắt đầu." />
+                <span asp-validation-for="Course.DateStart" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course.DateEnd" class="control-label"></label>
+                <input asp-for="Course.DateEnd" class="form-control" required data-val="true" data-val-required="Vui lòng nhập thời gian kết thúc." />
+                <span asp-validation-for="Course.DateEnd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-page="CourseMainPage">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

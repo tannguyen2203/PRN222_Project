@@ -1,0 +1,151 @@
+﻿@page
+@model CourseManagement.Pages.CoursePage.CourseStudentDetailsModel
+@{
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .button-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .edit-button,
+        .back-button {
+            text-decoration: none;
+            padding: 5px 10px;
+            background-color: #337ab7;
+            color: white;
+            border-radius: 3px;
+        }
+
+            .edit-button:hover,
+            .back-button:hover {
+                background-color: #23527c;
+            }
+
+        .separator {
+            margin: 0 5px;
+            color: #333;
+        }
+
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <h4>Course Detail</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Course.CourseCode)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Course.CourseCode)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Course.Instructor)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Course.Instructor)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Course.CourseDescription)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Course.CourseDescription)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Course.DateStart)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Course.DateStart)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Course.DateEnd)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Course.DateEnd)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Course.Status)
+            </dt>
+            <dd class="col-sm-10">
+                @if (Model.Course.Status == 0)
+                {
+                    @Html.Raw("Closed")
+                }
+                else if (Model.Course.Status == 1)
+                {
+                    @Html.Raw("Open")
+                }
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Sessions)
+            </dt>
+            <dd class="col-sm-10 text-right">
+                @foreach (var session in Model.Sessions)
+                {
+                    <div>@session.SessionDate</div>
+                }
+            </dd>
+            <dt class="col-sm-2">
+                <h6><b>Room</b></h6>
+            </dt>
+            <dd class="col-sm-10 text-right">
+                @foreach (var session in Model.Sessions)
+                {
+                    <div>@session.Room.RoomCode</div>
+                }
+            </dd>
+          
+        </dl>
+
+        <h4>Students</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Major</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var studentInCourse in Model.Course.StudentInCourses)
+                {
+                    <tr>
+                        <td>@studentInCourse.Student.Id</td>
+                        <td><img src="@studentInCourse.Student.Image" alt="Student Image" width="100" height="100" /></td>
+                        <td>@studentInCourse.Student.Name</td>
+                        <td>@studentInCourse.Student.Email</td>
+                        <td>
+                            @if (studentInCourse.Student.MajorId == 1)
+                            {
+                                <text>Software Engineering</text>
+                            }
+                            else if (studentInCourse.Student.MajorId == 2)
+                            {
+                                <text>Graphic Design</text>
+                            }
+                            else if (studentInCourse.Student.MajorId == 3)
+                            {
+                                <text>Buisness</text>
+                            }
+                        </td>
+                      
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="button-group">
+        <a class="back-button" asp-page="./CourseStudentPage">Back to List</a>
+    </div>
+
+</body>
+</html>

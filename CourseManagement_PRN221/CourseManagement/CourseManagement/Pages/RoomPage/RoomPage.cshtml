@@ -1,0 +1,185 @@
+﻿@page
+@model CourseManagement.Pages.RoomPage.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #FFFFFF;
+        }
+
+        .header {
+            background-color: #1E90FF;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .table-container {
+            margin-top: 20px;
+        }
+
+            .table-container table {
+                width: 100%;
+            }
+
+            .table-container th,
+            .table-container td {
+                padding: 8px;
+                text-align: left;
+            }
+
+            .table-container th {
+                background-color: #f2f2f2;
+            }
+
+            .table-container tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            .table-container a {
+                margin-right: 5px;
+            }
+
+                .table-container a:hover {
+                    text-decoration: underline;
+                }
+
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+        #searchInput{
+            margin-right: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Room Main Page</h1>
+    </div>
+
+    <div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../CoursePage/CourseMainPage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../SemesterPage/SemesterPage">Semester</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../SessionPage/SessionPage">Session</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../SubjectPage/SubjectPage">Subject</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container table-container">
+        <div class="d-flex justify-content-between">
+            <p>
+                <a asp-page="Create" class="btn btn-primary">Create New</a>
+            </p>
+            <div class="search-container mb-3">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm bằng mã phòng học">
+                    <div class="input-group-append">
+                        <button id="searchButton" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" style="display: none; font-size: 20px;">Không tìm thấy kết quả</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Room Code</th>
+                    <th>Detail</th>
+                    <th>Status</th>
+                    <th>Room Name</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.roomList)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.RoomCode)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Detail)</td>
+                        <td>
+                            @if (item.Status == 1)
+                            {
+                                <text>Open</text>
+                            }
+                            else if (item.Status == 0)
+                            {
+                                <text>Closed</text>
+                            }
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.RoomName)</td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Edit</a>
+                            <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                            <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Details</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <script>
+
+        searchButton.addEventListener("click", function () {
+            var searchText = searchInput.value.toLowerCase();
+            var rows = document.querySelectorAll("tbody tr");
+
+            var foundResults = false;
+
+            rows.forEach(function (row) {
+                var courseCodeCell = row.querySelector("td:first-child");
+                var courseCode = courseCodeCell.textContent.trim().toLowerCase();
+
+                if (courseCode.includes(searchText)) {
+                    row.style.display = "table-row";
+                    foundResults = true;
+                } else {
+                    row.style.display = "none";
+                }
+            });
+
+
+            if (foundResults) {
+                noResults.style.display = "none";
+            } else {
+                noResults.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>

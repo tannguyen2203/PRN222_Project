@@ -1,0 +1,127 @@
+﻿@page
+@model CourseManagement.Pages.MajorPage.IndexModel
+
+<style>
+    body {
+        padding: 20px;
+        background-color: #FFFFFF;
+    }
+
+    .course-link {
+        cursor: pointer;
+        color: blue;
+        text-decoration: underline;
+    }
+
+    .header {
+        background-color: #1E90FF;
+        padding: 10px;
+        color: white;
+        text-align: center;
+    }
+
+    .table-container {
+        margin-top: 20px;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #f8f9fa;
+        padding: 20px;
+    }
+
+    .navbar-nav {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .nav-item {
+        margin-bottom: 10px;
+    }
+
+    #ddlYear {
+        background-color: #ffffff;
+        color: #000000;
+    }
+
+    #ddlYear {
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+    }
+
+    #ddlYear {
+        width: 200px;
+        height: 30px;
+    }
+
+</style>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+
+<div>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="../SubjectPage/SubjectPage">Subject</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../SemesterPage/SemesterPage">Semester</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../SessionPage/SessionPage">Session</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../RoomPage/RoomPage">Room</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../Student/StudentList">StudentList</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../MajorPage/MajorList">MajorList</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Major[0].MajorCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major[0].MajorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Major[0].Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Major) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MajorCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MajorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Status)
+            </td>
+            <td>
+                <a asp-page="./EditMajor" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-page="./DetailsMajor" asp-route-id="@item.Id">Details</a> |
+                    <a asp-page="./DeleteMajor" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

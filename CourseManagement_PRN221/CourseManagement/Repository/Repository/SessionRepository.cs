@@ -1,0 +1,16 @@
+﻿using CrouseManagement.Repository.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Repository.Repository
+{
+    public class SessionRepository : RepositoryBase<Session>
+    {
+        public SessionRepository(CourseManagementContext context) : base(context)
+        {
+        }
+    }
+}

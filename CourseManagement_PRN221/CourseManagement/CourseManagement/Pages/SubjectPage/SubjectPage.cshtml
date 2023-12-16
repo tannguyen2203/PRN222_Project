@@ -1,0 +1,166 @@
+﻿@page
+@model CourseManagement.Pages.SubjectPage.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #FFFFFF;
+        }
+
+        .course-link {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .header {
+            background-color: #1E90FF;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .table-container {
+            margin-top: 20px;
+        }
+
+        .btn {
+            margin-right: 5px;
+            margin-top: 20px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+        #searchInput{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="header">
+        <h1>Subject Page</h1>
+    </div>
+    <div>
+        <div class="container table-container">
+
+            <div class="d-flex justify-content-between">
+                <p>
+                    <a asp-page="Create" class="btn btn-primary">Create New</a>
+                </p>
+                <div class="search-container">
+                    <div class="input-group">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Tìm kiếm bằng mã subject">
+                        <div class="input-group-append">
+                            <button id="searchButton" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="noResults" style="display: none; font-size: 20px;">Không tìm thấy kết quả</div>
+
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../Coursepage/CourseMainPage">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../SemesterPage/SemesterPage">Semester</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../SessionPage/SessionPage">Session</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../RoomPage/RoomPage">Room</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Subject Name</th>
+                    <th>Subject Code</th>
+                    <th>Create Date</th>
+                    <th>Major ID</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Subject)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.SubjectName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.SubjectCode)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CreateDate)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Major.MajorCode)</td>
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Edit</a>
+                            <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                            <a asp-page="./Details" asp-route-id="@item.Id" class="btn btn-sm btn-secondary">Details</a>
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <script>
+
+        searchButton.addEventListener("click", function () {
+            var searchText = searchInput.value.toLowerCase();
+            var rows = document.querySelectorAll("tbody tr");
+
+            var foundResults = false;
+
+            rows.forEach(function (row) {
+                var courseCodeCell = row.querySelector("td:first-child");
+                var courseCode = courseCodeCell.textContent.trim().toLowerCase();
+
+                if (courseCode.includes(searchText)) {
+                    row.style.display = "table-row";
+                    foundResults = true;
+                } else {
+                    row.style.display = "none";
+                }
+            });
+
+
+            if (foundResults) {
+                noResults.style.display = "none";
+            } else {
+                noResults.style.display = "block";
+            }
+        });
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,254 @@
+﻿@page
+@model CourseManagement.Pages.CoursePage.IndexModel
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #FFFFFF;
+        }
+
+        .course-link {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+
+        .header {
+            background-color: #1E90FF;
+            padding: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .table-container {
+            margin-top: 20px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+        #ddlYear {
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        #ddlYear {
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+
+        #ddlYear {
+            width: 200px;
+            height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Course Main Page</h1>
+    </div>
+
+    @if (HttpContext.Session.GetString("isAdmin") != "true")
+    {
+        <div class="nav-item">
+            <a class="nav-link login-button" href="../Login">Login</a>
+        </div>
+    }
+    else
+    {
+        <div class="nav-item">
+            <form method="post" asp-page-handler="Logout">
+                <button type="submit" class="nav-link logout-button" onclick="logout()">Logout</button>
+            </form>
+        </div>
+        HttpContext.Session.Clear();
+    }
+
+    <div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../SubjectPage/SubjectPage">Subject</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../SemesterPage/SemesterPage">Semester</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../SessionPage/SessionPage">Session</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../RoomPage/RoomPage">Room</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../Student/StudentList">StudentList</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../MajorPage/MajorList">MajorList</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="container table-container">
+
+        <div class="d-flex justify-content-between">
+            <p>
+                <a asp-page="Create" class="btn btn-primary">Create New</a>
+            </p>
+            <div>
+                <select id="ddlYear" onchange="filterCoursesByMatch(this.value)">
+                <option value="all">All</option>
+             
+            </select>
+        </div>
+            <div class="search-container mb-3">
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control mr-4" placeholder="Tìm kiếm mã khóa học">
+                    <div class="input-group-append">
+                        <button id="searchButton" class="btn btn-primary">Search</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="noResults" style="display: none; font-size: 20px;">Không tìm thấy kết quả</div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Instructor</th>
+                    <th>Course Description</th>
+                    <th>Date Start</th>
+                    <th>Date End</th>
+                    <th>Status</th>
+                    <th>Semester</th>
+                    <th>Subject</th>
+
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.courseList)
+                {
+                    <tr>
+                        <td>
+                            <span class="course-link" data-course-id="@item.Id">@Html.DisplayFor(modelItem => item.CourseCode)</span>
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.Instructor)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CourseDescription)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DateStart)</td>
+                        <td>@Html.DisplayFor(modelItem => item.DateEnd)</td>
+                        <td>
+                            @if (item.Status == 1)
+                            {
+                                <text>Open</text>
+                            }
+                            else if (item.Status == 0)
+                            {
+                                <text>Closed</text>
+                            }
+                        </td>
+                        <td>@Html.DisplayFor(modelItem => item.Semester.SemesterName)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Subject.SubjectName)</td>
+
+
+                        <td>
+                            <a asp-page="./Edit" asp-route-id="@item.Id" class="btn btn-sm btn-info">Edit</a>
+                            <a asp-page="./Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var courseLinks = document.querySelectorAll(".course-link");
+
+            courseLinks.forEach(function (link) {
+                link.addEventListener("click", function () {
+                    var courseId = this.getAttribute("data-course-id");
+                    window.location.href = "/CoursePage/Details?id=" + courseId;
+                });
+            });
+
+            var searchButton = document.getElementById("searchButton");
+            var searchInput = document.getElementById("searchInput");
+            var noResults = document.getElementById("noResults");
+
+            searchButton.addEventListener("click", function () {
+                var searchText = searchInput.value.toLowerCase();
+                var rows = document.querySelectorAll("tbody tr");
+
+                var foundResults = false;
+
+                rows.forEach(function (row) {
+                    var courseCodeCell = row.querySelector("td:first-child");
+                    var courseCode = courseCodeCell.textContent.trim().toLowerCase();
+
+                    if (courseCode.includes(searchText)) {
+                        row.style.display = "table-row";
+                        foundResults = true;
+                    } else {
+                        row.style.display = "none";
+                    }
+                });
+
+
+                if (foundResults) {
+                    noResults.style.display = "none";
+                } else {
+                    noResults.style.display = "block";
+                }
+            });
+
+
+        });
+
+        function filterCoursesByMatch(selectedYear) {
+            var rows = document.querySelectorAll(".table tbody tr");
+
+            rows.forEach(function (row) {
+                var yearCreateCell = row.querySelector("td:nth-last-child(2)");
+                var yearCreate = parseInt(yearCreateCell.textContent.trim());
+
+                if (selectedYear === "all" || yearCreate === parseInt(selectedYear)) {
+                    row.style.display = "table-row";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
+
+        function logout() {
+            window.location.href = '../CoursePage/CourseStudentPage';
+        }
+
+    </script>
+</body>
+</html>

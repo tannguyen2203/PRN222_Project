@@ -1,0 +1,39 @@
+﻿@page
+@model CourseManagement.Pages.MajorPage.EditModel
+
+<h4>Major</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Major.Id" />
+            <div class="form-group">
+                <label asp-for="Major.MajorCode" class="control-label"></label>
+                <input asp-for="Major.MajorCode" class="form-control" />
+                <span asp-validation-for="Major.MajorCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Major.MajorName" class="control-label"></label>
+                <input asp-for="Major.MajorName" class="form-control" />
+                <span asp-validation-for="Major.MajorName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Major.Status" class="control-label"></label>
+                <input asp-for="Major.Status" class="form-control" />
+                <span asp-validation-for="Major.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./MajorList">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

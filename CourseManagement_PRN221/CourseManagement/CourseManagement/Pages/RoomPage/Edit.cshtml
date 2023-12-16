@@ -1,0 +1,47 @@
+﻿@page
+@model CourseManagement.Pages.RoomPage.EditModel
+
+<h4>Room</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Room.Id" />
+            <div class="form-group">
+                <label asp-for="Room.RoomCode" class="control-label"></label>
+                <input asp-for="Room.RoomCode" class="form-control" required data-val="true" data-val-required="Vui lòng nhập mã phòng." />
+                <span asp-validation-for="Room.RoomCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Detail" class="control-label"></label>
+                <input asp-for="Room.Detail" class="form-control" required data-val="true" data-val-required="Vui lòng nhập thông tin phòng."/>
+                <span asp-validation-for="Room.Detail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.Status" class="control-label"></label>
+                <select asp-for="Room.Status" class="form-control">
+                    <option value="1">Open</option>
+                    <option value="0">Closed</option>
+                </select>
+                <span asp-validation-for="Room.Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Room.RoomName" class="control-label"></label>
+                <input asp-for="Room.RoomName" class="form-control" required data-val="true" data-val-required="Vui lòng nhập tên phòng."/>
+                <span asp-validation-for="Room.RoomName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./RoomPage">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

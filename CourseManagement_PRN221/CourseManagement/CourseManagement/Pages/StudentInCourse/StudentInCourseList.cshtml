@@ -1,0 +1,114 @@
+﻿@page
+@model CourseManagement.Pages.StudentInCourse.IndexModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student In Course</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background-color: #007bff;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .table {
+            background-color: white;
+        }
+
+            .table th {
+                font-weight: bold;
+            }
+
+            .table td {
+                vertical-align: middle;
+            }
+
+        .table-actions {
+            text-align: center;
+        }
+
+        .btn {
+            margin-right: 5px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100vh;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .navbar-nav {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .nav-item {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Student In Course</h1>
+        </div>
+        <div class="container table-container">
+
+            <div class="d-flex justify-content-between">
+                <p>
+                    <a asp-page="CreateStudentInCourse" class="btn btn-primary">Create New</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Status</th>
+                <th>Course</th>
+                <th>Student</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.StudentInCourse)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Status)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Course.CourseCode)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Student.Name)
+                    </td>
+                    <td>
+                        <a asp-page="../CoursePage/CourseStudentDetails" asp-route-id="@item.Course.Id">Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,213 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = CourseManagement
+build_property.RootNamespace = CourseManagement
+build_property.ProjectDir = C:\Users\duyta\OneDrive\Desktop\PRN221_3W\CourseManagement_PRN221\CourseManagement\CourseManagement\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\duyta\OneDrive\Desktop\PRN221_3W\CourseManagement_PRN221\CourseManagement\CourseManagement
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/CoursePage/CourseMainPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlUGFnZVxDb3Vyc2VNYWluUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/CoursePage/CourseStudentDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlUGFnZVxDb3Vyc2VTdHVkZW50RGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/CoursePage/CourseStudentPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlUGFnZVxDb3Vyc2VTdHVkZW50UGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/CoursePage/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlUGFnZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/CoursePage/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlUGFnZVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/CoursePage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlUGFnZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/CoursePage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlUGFnZVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9naW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/MajorPage/CreateMajor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFqb3JQYWdlXENyZWF0ZU1ham9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/MajorPage/DeleteMajor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFqb3JQYWdlXERlbGV0ZU1ham9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/MajorPage/DetailsMajor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFqb3JQYWdlXERldGFpbHNNYWpvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/MajorPage/EditMajor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFqb3JQYWdlXEVkaXRNYWpvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/MajorPage/MajorList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWFqb3JQYWdlXE1ham9yTGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/RoomPage/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVBhZ2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/RoomPage/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVBhZ2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/RoomPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVBhZ2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/RoomPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVBhZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/RoomPage/RoomPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUm9vbVBhZ2VcUm9vbVBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SemesterPage/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VtZXN0ZXJQYWdlXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SemesterPage/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VtZXN0ZXJQYWdlXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SemesterPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VtZXN0ZXJQYWdlXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SemesterPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VtZXN0ZXJQYWdlXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SemesterPage/SemesterPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2VtZXN0ZXJQYWdlXFNlbWVzdGVyUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SessionPage/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhZ2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SessionPage/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhZ2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SessionPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhZ2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SessionPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SessionPage/SessionPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2Vzc2lvblBhZ2VcU2Vzc2lvblBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/StudentInCourse/CreateStudentInCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudEluQ291cnNlXENyZWF0ZVN0dWRlbnRJbkNvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/StudentInCourse/DeleteStudentInCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudEluQ291cnNlXERlbGV0ZVN0dWRlbnRJbkNvdXJzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/StudentInCourse/DetailsStudentInCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudEluQ291cnNlXERldGFpbHNTdHVkZW50SW5Db3Vyc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/StudentInCourse/EditStudentInCourse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudEluQ291cnNlXEVkaXRTdHVkZW50SW5Db3Vyc2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/StudentInCourse/StudentInCourseList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudEluQ291cnNlXFN0dWRlbnRJbkNvdXJzZUxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Student/CreateStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxDcmVhdGVTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Student/DeleteStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxEZWxldGVTdHVkZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Student/DetailsStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxEZXRhaWxzU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Student/EditStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxFZGl0U3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Student/StudentList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudFxTdHVkZW50TGlzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SubjectPage/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViamVjdFBhZ2VcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SubjectPage/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViamVjdFBhZ2VcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SubjectPage/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViamVjdFBhZ2VcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SubjectPage/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViamVjdFBhZ2VcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/SubjectPage/SubjectPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3ViamVjdFBhZ2VcU3ViamVjdFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/duyta/OneDrive/Desktop/PRN221_3W/CourseManagement_PRN221/CourseManagement/CourseManagement/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-my75gbgfiy

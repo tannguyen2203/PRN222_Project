@@ -1,0 +1,31 @@
+﻿@page
+@model CourseManagement.Pages.MajorPage.DetailsModel
+
+<div>
+    <h4>Major</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Major.MajorCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Major.MajorCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Major.MajorName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Major.MajorName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Major.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Major.Status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./EditMajor" asp-route-id="@Model.Major?.Id">Edit</a> |
+    <a asp-page="./MajorList">Back to List</a>
+</div>

@@ -1,0 +1,37 @@
+﻿@page
+@model CourseManagement.Pages.SemesterPage.DetailsModel
+
+<div>
+    <h4>Semester</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester.SemesterName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Semester.SemesterName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester.DateCreate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Semester.DateCreate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester.Status)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Semester.Status)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Semester.SemesterCode)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Semester.SemesterCode)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Semester?.Id">Edit</a> |
+    <a asp-page="./SemesterPage">Back to List</a>
+</div>
